@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { Dialogs } from './components/Dialogs/Dialogs';
 import { Footer } from './components/Footer/Footer';
 import { Header } from './components/Header/Header';
 import { Navbar } from './components/Navbar/Navbar';
@@ -11,7 +12,8 @@ function App() {
       <Header />
       <div className='app-content'>
         <Navbar />
-        <Profile />
+        {/* <Profile /> */}
+        <Dialogs />
       </div>
       <Footer />
     </div>
