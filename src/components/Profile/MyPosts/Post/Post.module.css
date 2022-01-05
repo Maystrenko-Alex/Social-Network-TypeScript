@@ -21,3 +21,12 @@
 .post_message {
  margin: 10px;
 }
+
+.like {
+  margin: 1px;
+  display: flex;
+  align-items: flex-end;
+}
+.like img {
+  width: 12px;
+}
