@@ -1,25 +1,23 @@
 import React from "react";
+import { v1 } from "uuid";
 import s from './Navbar.module.css';
 
 export const Navbar = () => {
-  
+  const navbarList = ['Profile', 'Message', 'News', 'Music', 'Settings'];
+  const navbarJSX = navbarList.map(item => {
+    return (
+    (item === 'Message')
+      ? <div className={s.item} key={v1()}>
+        <a href={'/dialogs'} >{item}</a>
+      </div>
+      : <div className={s.item} key={v1()}>
+        <a href={'/' + item.toLowerCase()} >{item}</a>
+      </div>
+    )
+  })
   return (
     <nav className={s.navbar_wrapper}>
-      <div className={s.item}>
-        <a  href="/profile">Profile</a>
-      </div>
-      <div className={s.item}>
-        <a href="/message">Message</a>
-      </div>
-      <div className={s.item}>
-        <a href="/news">News</a>
-      </div>
-      <div className={s.item}>
-        <a href="/music">Music</a>
-      </div>
-      <div className={s.item}>
-        <a href="/settings">Settings</a>
-      </div>
-    </nav>
+      {navbarJSX}
+    </nav> 
   );
 }

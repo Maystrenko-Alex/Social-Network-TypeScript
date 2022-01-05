@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Dialogs } from './components/Dialogs/Dialogs';
 import { Footer } from './components/Footer/Footer';
@@ -8,15 +9,19 @@ import { Profile } from './components/Profile/Profile';
 
 function App() {
   return (
-    < div className='app-wrapper'>
-      <Header />
-      <div className='app-content'>
-        <Navbar />
-        {/* <Profile /> */}
-        <Dialogs />
+    <BrowserRouter >
+      < div className='app-wrapper'>
+        <Header />
+        <div className='app-content'>
+          <Navbar />
+          <Routes>
+            <Route path='/profile' element={<Profile />} />
+            <Route path='/dialogs' element={<Dialogs />} />
+          </Routes>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
 
