@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { v1 } from "uuid";
 import s from './Navbar.module.css';
 
@@ -8,10 +9,14 @@ export const Navbar = () => {
     return (
     (item === 'Message')
       ? <div className={s.item} key={v1()}>
-        <a href={'/dialogs'} >{item}</a>
+        <NavLink 
+          style={({ isActive }) =>({color: isActive ? 'gold' : ''})} 
+          to={'/dialogs'} >{item}</NavLink>
       </div>
       : <div className={s.item} key={v1()}>
-        <a href={'/' + item.toLowerCase()} >{item}</a>
+        <NavLink 
+        style={({ isActive }) =>({color: isActive ? 'gold' : ''})}
+        to={'/' + item.toLowerCase()} >{item}</NavLink>
       </div>
     )
   })
