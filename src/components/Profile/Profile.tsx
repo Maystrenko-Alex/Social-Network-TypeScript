@@ -1,16 +1,12 @@
 import React from "react";
 import { MyPosts } from "./MyPosts/MyPosts";
 import s from './Profile.module.css';
+import { ProfileInfo } from "./ProfileInfo/ProfileInfo";
 
 export const Profile = () => {
   return (
     <div className='content_wrapper'>
-      <div>
-        <img className={s.content_img} src="https://img.freepik.com/free-psd/logo-mockup-grey-wall_35913-2122.jpg?size=626&ext=jpg" alt='' />
-      </div>
-      <div>
-        Ava + description
-      </div>
+      <ProfileInfo />
       <MyPosts />
     </div>
   );
