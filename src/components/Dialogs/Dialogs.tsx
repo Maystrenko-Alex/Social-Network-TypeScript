@@ -32,7 +32,7 @@ export const Dialogs = () => {
     { id: '2', message: 'How are you?' },
     { id: '3', message: 'Yoo' },
     { id: '4', message: 'Yoo' },
-    { id: '5', message: 'Yoo' },
+    { id: '5', message: 'Yoo' }
   ]
 
   const dialogsJSX = dialogsData.map( d => <Dialog id={d.id} name={d.name} />)
