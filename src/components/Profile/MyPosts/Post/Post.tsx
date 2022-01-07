@@ -22,8 +22,7 @@ export const Post = (props: PropsType) => {
         <img 
         alt='images'
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMsdcSsic7zbHMs3pjjVj8xpjJ-pJ_36PDHvCVd61cvf-oZNpSmJBOXK2fL149m3ByEsw&usqp=CAU"/>
-        {props.likeCount}  
-
+        {props.likeCount}
       </div>
     </div>
   );

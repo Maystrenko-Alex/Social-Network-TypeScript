@@ -1,20 +1,23 @@
-.app-wrapper {
+.app_wrapper {
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
   overflow: hidden;
 }
 
-.app-content {
-  display: inline-flex;
-  flex: 1 1 100%;
+.app_content {
+  display: flex;
+  width: 100%;
+  flex: 1 1 auto;
+  
   background-color: rgb(229, 232, 233);
   margin: 5px 0;
-  /* justify-content: center; */
+  
 }
 
 .content_wrapper {
   background-color: white;
   padding: 5px;
-  flex: 100%;
+  min-height: 80vh;
+  flex: 1 1 auto;
+  
 }

@@ -1,5 +1,30 @@
-.content_wrapper {
-  background-color: white;
-  padding: 5px;
-  flex: 100%;
+.dialogs {
+  display: flex;
+  padding: 25px;
+  background-color: white;  
+}
+
+.dialogs_items {
+  width: 25%;
+}
+.dialog {
+ margin: 10px 5px;
+}
+.line {
+  width: 1px;
+  border: 1px solid black;
+  
+}
+.messages {
+  width: 75%;
+}
+
+.message {
+  margin: 10px 5px 10px 15px;
+  padding: 5px 10px;
+  background-color: rgb(229, 232, 233);
+  border-radius: 5px;
+}
+.active {
+  color: gold;
 }
