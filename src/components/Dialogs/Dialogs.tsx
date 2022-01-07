@@ -8,25 +8,52 @@ export type DialogPropsType = {
 }
 
 type MessagePropsType = {
+  id: string
   message: string
 }
+type DialogType = {
+  id: string
+  name: string
+}
+export type DialogsDataType = Array<DialogType>
 
 export const Dialogs = () => {
+  let dialogsData: DialogsDataType = [
+    { id: '1', name: 'Dimych' },
+    { id: '2', name: 'Andrew' },
+    { id: '3', name: 'Sveta' },
+    { id: '4', name: 'Sasha' },
+    { id: '5', name: 'Viktor' },
+    { id: '6', name: 'Viktor' }
+  ]
+
+  let messagesData = [
+    { id: '1', message: 'Hi' },
+    { id: '2', message: 'How are you?' },
+    { id: '3', message: 'Yoo' },
+    { id: '4', message: 'Yoo' },
+    { id: '5', message: 'Yoo' },
+  ]
+
+  const dialogsJSX = dialogsData.map( d => <Dialog id={d.id} name={d.name} />)
+  const messagesJSX = messagesData.map( m => <Message id={m.id} message={m.message} />)
   return (
     <div className={s.dialogs}>
       <div className={s.dialogs_items}>
-        <Dialog id='1' name='Dimych' />
+        {dialogsJSX}
+        {/* <Dialog id='1' name='Dimych' />
         <Dialog id='2' name='Andrew' />
         <Dialog id='3' name='Sveta' />
         <Dialog id='4' name='Sasha' />
         <Dialog id='5' name='Viktor' />
-        <Dialog id='6' name='Viktor' />
+        <Dialog id='6' name='Viktor' /> */}
       </div>
       <div className={s.line}></div>
       <div className={s.messages}>
-        <Message message="Hi" />
+        {messagesJSX}
+        {/* <Message message="Hi" />
         <Message message="How are you?" />
-        <Message message="Yoo" />
+        <Message message="Yoo" /> */}
       </div>
     </div>
   );
@@ -45,6 +72,6 @@ const Dialog = (props: DialogPropsType) => {
 
 const Message = (props: MessagePropsType) => {
   return (
-    <div className={s.message}>{props.message}</div>
+    <div className={s.message} id={props.id}>{props.message}</div>
   );
 }
