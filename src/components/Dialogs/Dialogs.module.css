@@ -7,9 +7,7 @@
 .dialogs_items {
   width: 25%;
 }
-.dialog {
- margin: 10px 5px;
-}
+
 .line {
   width: 1px;
   border: 1px solid black;
@@ -19,12 +17,7 @@
   width: 75%;
 }
 
-.message {
-  margin: 10px 5px 10px 15px;
-  padding: 5px 10px;
-  background-color: rgb(229, 232, 233);
-  border-radius: 5px;
-}
-.active {
+
+/* .active {
   color: gold;
-}
+} */

@@ -8,6 +8,9 @@
 .item {
   font-size: 22px;
   margin-top: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 450;
 }
 .item > a {
   text-decoration: none;
