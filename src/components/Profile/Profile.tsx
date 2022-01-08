@@ -1,5 +1,5 @@
 import React from "react";
-import { PostsDataType } from "../../App";
+import { PostsDataType } from "../..";
 import { MyPosts } from "./MyPosts/MyPosts";
 import s from './Profile.module.css';
 import { ProfileInfo } from "./ProfileInfo/ProfileInfo";
@@ -13,7 +13,7 @@ export const Profile = (props: ProfilePropsType) => {
   return (
     <div className='content_wrapper'>
       <ProfileInfo />
-      <MyPosts postsData={props.postsData}/>
+      <MyPosts postsData={props.postsData} />
     </div>
   );
 }
