@@ -1,5 +1,5 @@
 .navbar_wrapper {
-  width: 150px;
+  width: 200px;
   background-color: rgb(229, 232, 233);
   padding: 5px 10px;
   margin-top: 15px;
@@ -20,4 +20,27 @@
 .btn_active {
   color: blue;
 }
+.friends_wrapper {
+  padding-top: 50px;
+}
+.friends{
+  display: flex;
+  justify-content: space-around;
+}
+.friends_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 60px; */
+  margin: 3px;
 
+}
+.friends img {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+}
+.sidebar_head {
+  font-size: 24px;
+  margin-bottom: 15px;
+}

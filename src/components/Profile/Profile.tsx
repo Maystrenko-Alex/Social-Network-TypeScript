@@ -1,11 +1,11 @@
 import React from "react";
-import { PostsDataType } from "../..";
+import { PostsDataType } from "../../redux/state";
 import { MyPosts } from "./MyPosts/MyPosts";
-import s from './Profile.module.css';
+
 import { ProfileInfo } from "./ProfileInfo/ProfileInfo";
 
 type ProfilePropsType = {
-  postsData: PostsDataType
+  posts: PostsDataType
 }
 
 export const Profile = (props: ProfilePropsType) => {
@@ -13,7 +13,7 @@ export const Profile = (props: ProfilePropsType) => {
   return (
     <div className='content_wrapper'>
       <ProfileInfo />
-      <MyPosts postsData={props.postsData} />
+      <MyPosts postsData={props.posts} />
     </div>
   );
 }
