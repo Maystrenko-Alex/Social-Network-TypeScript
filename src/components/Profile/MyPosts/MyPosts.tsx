@@ -5,6 +5,7 @@ import { Post } from "./Post/Post";
 
 type MyPostsPropsType = {
   postsData: PostsDataType
+  addPost: (postMessage: string) => void
 }
 export const MyPosts = (props: MyPostsPropsType) => {
 
@@ -12,8 +13,9 @@ export const MyPosts = (props: MyPostsPropsType) => {
   const newPostRef = React.createRef<HTMLTextAreaElement>()
   
   const addPost = () => {
+    debugger
         if (newPostRef.current) {
-      alert(newPostRef.current.value)
+      props.addPost(newPostRef.current.value)
     }
     // if (newPostRef.current) {
     //     alert(newPostRef.current.value  ) // newPostRef.current?.value возможно не существует!!!

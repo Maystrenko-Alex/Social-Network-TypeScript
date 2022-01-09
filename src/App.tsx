@@ -5,10 +5,11 @@ import { Dialogs } from './components/Dialogs/Dialogs';
 import { Header } from './components/Header/Header';
 import { Navbar } from './components/Navbar/Navbar';
 import { Profile } from './components/Profile/Profile';
-import appState from './redux/state';
+import appState, { addPost, AppStateType } from './redux/state';
 
 
 function App() {
+
   let posts = appState.profilePage.postsData;
   let dialogs = appState.messagePage.dialogsData;
   let messages = appState.messagePage.messagesData;
@@ -21,7 +22,7 @@ function App() {
           <Navbar friends={friendsData}/>
           <div className='content_wrapper'>
             <Routes>
-              <Route path='/profile' element={<Profile posts={posts} />} />
+              <Route path='/profile' element={<Profile posts={posts} addPost={addPost}/>} />
               <Route
                 path='/dialogs'
                 element={<Dialogs dialogs={dialogs} 

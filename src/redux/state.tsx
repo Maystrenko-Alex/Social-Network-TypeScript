@@ -18,7 +18,6 @@ export type FrendType = {
 }
 export type FriendsType = Array<FrendType>
 
-
 export type PostsDataType = Array<PostType>
 export type DialogsDataType = Array<DialogType>
 export type MessagesDataType = Array<MessageType>
@@ -44,9 +43,9 @@ let appState = {
   profilePage: {
     postsData: [
       { id: '1', message: 'How are you?', likesCount: 1 },
-      { id: '1', message: "It's my first post", likesCount: 1 },
-      { id: '1', message: 'Yoo', likesCount: 1 },
-      { id: '1', message: 'Yoo', likesCount: 1 }
+      { id: '2', message: "It's my first post", likesCount: 1 },
+      { id: '3', message: 'Yoo', likesCount: 1 },
+      { id: '4', message: 'Yoo', likesCount: 1 }
     ]
   },
   messagePage: {
@@ -75,5 +74,10 @@ let appState = {
   }
 }
 
+export let addPost = (postMessage: string) => {
+  let newPost = { id: '5', message: postMessage, likesCount: 0}
+  debugger
+  appState.profilePage.postsData.push(newPost)
+}
 export default appState;
 
