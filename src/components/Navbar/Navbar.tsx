@@ -31,17 +31,17 @@ export const Navbar = (props: NavbarPropsType) => {
       <div className={s.friends_wrapper}>
         <div className={s.sidebar_head}>FRIENDS</div>
         <div className={s.friends}>
-          <div className={s.friends_item}>
-            <img src='http://pm1.narvii.com/6889/74979d4d2744ec6e27995b6e866f091d04c0b40cr1-515-414v2_uhq.jpg'/>
-            Andrew
+          <div id={props.friends[0].id} className={s.friends_item}>
+            <img src={props.friends[0].ava} alt='#'/>
+            {props.friends[0].name}
           </div>
-          <div className={s.friends_item}>
-            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0e5DlsOkJ8OWU-8WCb30W6_oNXo12sCwpHQ&usqp=CAU'/>
-            Sasha
+          <div id={props.friends[1].id} className={s.friends_item}>
+            <img src={props.friends[1].ava} alt='#'/>
+            {props.friends[1].name}
           </div>
-          <div className={s.friends_item}>
-            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvzGBydv0evnLzL0WUe6_lfqp7cE_qlWM5vw&usqp=CAU'/>
-            Sveta
+          <div id={props.friends[2].id} className={s.friends_item}>
+            <img src={props.friends[2].ava} alt='#'/>
+            {props.friends[2].name}
           </div>
         </div>
       </div>

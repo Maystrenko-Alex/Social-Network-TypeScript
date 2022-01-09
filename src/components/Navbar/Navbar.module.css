@@ -21,7 +21,7 @@
   color: blue;
 }
 .friends_wrapper {
-  padding-top: 50px;
+  padding-top: 150px;
 }
 .friends{
   display: flex;
@@ -31,7 +31,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* width: 60px; */
+  width: 30%;
   margin: 3px;
 
 }
