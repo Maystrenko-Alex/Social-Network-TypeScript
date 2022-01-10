@@ -11,11 +11,11 @@ export const MyPosts = (props: MyPostsPropsType) => {
 
   const postsDataElements = props.postsData.map(p => <Post id={p.id} message={p.message} likeCount={p.likesCount} />);
   const newPostRef = React.createRef<HTMLTextAreaElement>()
-  
+
   const addPost = () => {
-    debugger
-        if (newPostRef.current) {
+    if (newPostRef.current) {
       props.addPost(newPostRef.current.value)
+      newPostRef.current.value = '';
     }
     // if (newPostRef.current) {
     //     alert(newPostRef.current.value  ) // newPostRef.current?.value возможно не существует!!!
@@ -26,10 +26,10 @@ export const MyPosts = (props: MyPostsPropsType) => {
       <h3>My post</h3>
       <div className={s.textarea_wrapper}>
         <textarea ref={newPostRef}></textarea>
-        <button 
+        <button
           className={s.btn_textarea}
           onClick={addPost}
-          >Add post</button>
+        >Add post</button>
       </div>
       <div className={s.posts}>
         {postsDataElements}

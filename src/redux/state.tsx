@@ -1,3 +1,5 @@
+import {rerenderEntireTree} from './../render';
+
 type PostType = {
   id: string,
   message: string,
@@ -76,8 +78,8 @@ let appState = {
 
 export let addPost = (postMessage: string) => {
   let newPost = { id: '5', message: postMessage, likesCount: 0}
-  debugger
   appState.profilePage.postsData.push(newPost)
+  rerenderEntireTree();
 }
 export default appState;
 
