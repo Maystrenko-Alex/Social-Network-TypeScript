@@ -13,31 +13,31 @@ type MessageType = {
   id: string,
   message: string
 }
-export type FrendType = {
+export type FriendType = {
   id: string,
   name: string,
   ava: string
 }
-export type FriendsType = Array<FrendType>
+export type FriendsType = Array<FriendType>
 
 export type PostsDataType = Array<PostType>
 export type DialogsDataType = Array<DialogType>
 export type MessagesDataType = Array<MessageType>
 export type SidebarType = {
-  friends: Array<FriendsType>
+  friends: FriendsType
 }
 
 type ProfilePageType = {
   postsData: PostsDataType
 }
-type MessagePageType = {
+type MessagesPageType = {
   dialogsData: DialogsDataType,
   messagesData: MessagesDataType
 }
 
 export type AppStateType = {
   profilePage: ProfilePageType,
-  messagesPage: MessagePageType,
+  messagesPage: MessagesPageType,
   sidebar: SidebarType
 }
 
@@ -50,7 +50,7 @@ let appState = {
       { id: '4', message: 'Yoo', likesCount: 1 }
     ]
   },
-  messagePage: {
+  messagesPage: {
     dialogsData: [
       { id: '1', name: 'Dimych' },
       { id: '2', name: 'Andrew' },
@@ -64,7 +64,7 @@ let appState = {
       { id: '2', message: 'How are you?' },
       { id: '3', message: 'Yoo' },
       { id: '4', message: 'Yoo' },
-      { id: '5', message: 'Yoo' }
+      { id: '5', message: 'Yoo' } 
     ]
   },
   sidebar: {
@@ -74,12 +74,13 @@ let appState = {
       {id: '3', name: 'Sveta', ava: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvzGBydv0evnLzL0WUe6_lfqp7cE_qlWM5vw&usqp=CAU'}
     ]
   }
-}
+} 
 
 export let addPost = (postMessage: string) => {
   let newPost = { id: '5', message: postMessage, likesCount: 0}
   appState.profilePage.postsData.push(newPost)
-  rerenderEntireTree();
+  rerenderEntireTree(appState)
+  debugger
 }
 export default appState;
 

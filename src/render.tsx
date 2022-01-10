@@ -2,9 +2,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-;
+import { AppStateType } from './redux/state';
 
-export let rerenderEntireTree = (state)=> {
+
+export let rerenderEntireTree = (state : AppStateType)=> {
 
 ReactDOM.render(  <App state={state}/>, document.getElementById('root') );
 

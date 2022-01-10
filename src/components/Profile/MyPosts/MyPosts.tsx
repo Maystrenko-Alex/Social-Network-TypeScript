@@ -17,9 +17,6 @@ export const MyPosts = (props: MyPostsPropsType) => {
       props.addPost(newPostRef.current.value)
       newPostRef.current.value = '';
     }
-    // if (newPostRef.current) {
-    //     alert(newPostRef.current.value  ) // newPostRef.current?.value возможно не существует!!!
-    // }
   }
   return (
     <div className={s.wrapper}>

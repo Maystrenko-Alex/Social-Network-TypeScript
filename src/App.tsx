@@ -7,12 +7,15 @@ import { Navbar } from './components/Navbar/Navbar';
 import { Profile } from './components/Profile/Profile';
 import appState, { addPost, AppStateType } from './redux/state';
 
+type AppPropsType = {
+  state: AppStateType
+}
 
-function App() {
+function App(props: AppPropsType) {
 
   let posts = appState.profilePage.postsData;
-  let dialogs = appState.messagePage.dialogsData;
-  let messages = appState.messagePage.messagesData;
+  let dialogs = appState.messagesPage.dialogsData;
+  let messages = appState.messagesPage.messagesData;
   let friendsData = appState.sidebar.friends
   return (
     <BrowserRouter >
